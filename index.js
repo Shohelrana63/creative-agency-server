@@ -88,6 +88,16 @@ client.connect(err => {
             })
 
     })
+    //
+
+    app.get('/totalorders', (req, res) => {
+        orderCollection.find({})
+            .toArray((err, documents) => {
+                res.send(documents);
+            })
+
+    })
+
     //review
     app.post('/review', (req, res) => {
         const name = req.body.name;
