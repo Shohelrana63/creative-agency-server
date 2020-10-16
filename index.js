@@ -77,7 +77,7 @@ client.connect(err => {
 
         orderCollection.insertOne({ name, email, service, description, price, image })
             .then(result => {
-                res.send(result.insertedCount > 0);
+                res.send(result);
             })
     })
 
